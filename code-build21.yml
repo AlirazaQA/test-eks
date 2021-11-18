@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+
+  pre_build:
+    commands:
+      - aws eks --region us-east-2 update-kubeconfig --name hypr-cluster-ali
+      
+ 
+  build:
+    commands:
+      
+      - kubectl apply -f nginx-deployment.yml
+      - kubectl apply -f service.yml
+      
