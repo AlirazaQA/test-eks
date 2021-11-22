@@ -5,7 +5,7 @@ metadata:
   namespace: kube-system
 data:
   mapRoles: |
-    - rolearn: arn:aws:iam::667978309312:role/codebuild-codebuild-ali-service-role
+    - rolearn: arn:aws:iam::667978309312:role/Eks-cluster-hypr-ali
       username: system:node:{{EC2PrivateDNSName}}
       groups:
         - system:bootstrappers
