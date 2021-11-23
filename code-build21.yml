@@ -11,7 +11,7 @@ phases:
       - export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
       - aws sts get-caller-identity
       - aws eks --region us-east-2 update-kubeconfig --name hypr-cluster-ali
-      - aws eks update-kubeconfig --name hypr-cluster-ali --region us-east-2
+      #- aws eks update-kubeconfig --name hypr-cluster-ali --region us-east-2
       
  
   build:
