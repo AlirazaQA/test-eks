@@ -15,7 +15,7 @@ phases:
  
   build:
     commands:
-      
+      - kubectl get pods -A
       - kubectl apply -f nginx-deployment.yml
       - kubectl apply -f service.yml
       
