@@ -16,10 +16,10 @@ phases:
  
   build:
     commands:
-      - #kubectl get pods -A
+      - kubectl get pods -A
       - kubectl apply -f ngnix.yaml
       - kubectl apply -f test-deployment.yml
       - kubectl apply -f service-ClusterIP.yml
       - kubectl apply -f ingress1.yml
-      - kubectl get pods -A
+
       
