@@ -19,7 +19,7 @@ phases:
       - kubectl get pods -A
       - kubectl apply -f nginx.yaml
       - kubectl apply -f test-deployment.yml
-      - kubectl apply -f service-ClusterIP.yml
+      - kubectl apply -f service-clusterIP.yml
       - kubectl apply -f ingress1.yml
 
       
