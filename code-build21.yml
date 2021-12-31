@@ -10,7 +10,6 @@ phases:
       - export AWS_SESSION_TOKEN="$(echo ${CREDENTIALS} | jq -r '.Credentials.SessionToken')"
       - export AWS_EXPIRATION=$(echo ${CREDENTIALS} | jq -r '.Credentials.Expiration')
       - aws sts get-caller-identity
-      - Echo (aws sts get-caller-identity)
       - aws eks --region us-east-2 update-kubeconfig --name hypr-cluster-ali
       #- aws eks update-kubeconfig --name hypr-cluster-ali --region us-east-2
       
